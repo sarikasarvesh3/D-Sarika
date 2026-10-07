@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of D Sarika — Software Engineer showcasing full-stack projects, technical skills, and experience." />
+  <meta name="author" content="D Sarika" />
+  <meta name="keywords" content="D Sarika, Sarika, software engineer, full stack developer, web developer, portfolio, projects, skills" />
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:title" content="D Sarika | Software Engineer" />
+  <meta property="og:description" content="Explore my work, skills, and journey as a software engineer." />
+  <meta property="og:type" content="website" />
+
+  <title>D Sarika | Software Engineer</title>
+
+  <!-- Link to external stylesheet (create style.css separately) -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon placeholder (replace with your own) -->
+  <!-- <link rel="icon" href="assets/favicon.ico" type="image/x-icon" /> -->
+</head>
+
+<body>
+
+  <!-- ============================================================
+         SIDEBAR — Vertical navigation (fixed left)
+         Includes: logo, 8 nav links, social strip, mobile toggle
+    ============================================================ -->
+
+  <!-- Mobile hamburger toggle (floats over content on small screens) -->
+  <button id="sidebar-toggle" class="sidebar-toggle" aria-expanded="false" aria-controls="sidebar"
+    aria-label="Open navigation menu">
+    <span class="sidebar-toggle__bar"></span>
+    <span class="sidebar-toggle__bar"></span>
+    <span class="sidebar-toggle__bar"></span>
+  </button>
+
+  <!-- Backdrop (mobile overlay) -->
+  <div id="sidebar-backdrop" class="sidebar-backdrop" aria-hidden="true"></div>
+
+  <!-- Sidebar navigation -->
+  <aside id="sidebar" class="sidebar" role="navigation" aria-label="Primary navigation">
+
+    <!-- ── Brand / Logo ──────────────────────────────────── -->
+    <div class="sidebar__brand">
+      <a href="#hero" class="sidebar__logo" aria-label="Back to top">
+        <!-- Decorative initial monogram -->
+        <span class="sidebar__monogram" aria-hidden="true">S</span>
+        <span class="sidebar__logo-text">
+          <span class="sidebar__logo-name">Sarika</span>
+          <span class="sidebar__logo-role">Software Engineer</span>
+        </span>
+      </a>
+    </div>
+
+    <!-- ── Decorative rule ───────────────────────────────── -->
+    <div class="sidebar__rule" aria-hidden="true"></div>
+
+    <!-- ── Navigation links ─────────────────────────────── -->
+    <nav id="sidebar-nav" aria-label="Site sections">
+      <ul class="sidebar__menu" role="list">
+
+        <li class="sidebar__item">
+          <a href="#hero" class="sidebar__link sidebar__link--active" data-section="hero">
+            <span class="sidebar__link-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </span>
+            <span class="sidebar__link-label">Home</span>
+            <span class="sidebar__link-accent" aria-hidden="true"></span>
+          </a>
+        </li>
+
+        <li class="sidebar__item">
+          <a href="#about" class="sidebar__link" data-section="about">
+            <span class="sidebar__link-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </span>
+            <span class="sidebar__link-label">About Me</span>
+            <span class="sidebar__link-accent" aria-hidden="true"></span>
+          </a>
+        </li>
+
+        <li class="sidebar__item">
+          <a href="#skills" class="sidebar__link" data-section="skills">
+            <span class="sidebar__link-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </span>
+            <span class="sidebar__link-label">Skills</span>
+            <span class="sidebar__link-accent" aria-hidden="true"></span>
+          </a>
+        </li>
+
+        <li class="sidebar__item">
+          <a href="#timeline" class="sidebar__link" data-section="timeline">
+            <span class="sidebar__link-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="8" y1="6" x2="21" y2="6" />
+                <line x1="8" y1="12" x2="21" y2="12" />
+                <line x1="8" y1="18" x2="21" y2="18" />
+                <line x1="3" y1="6" x2="3.01" y2="6" />
+                <line x1="3" y1="12" x2="3.01" y2="12" />
+                <line x1="3" y1="18" x2="3.01" y2="18" />
+              </svg>
+            </span>
+            <span class="sidebar__link-label">Timeline</span>
+            <span class="sidebar__link-accent" aria-hidden="true"></span>
+          </a>
+        </li>
+
+        <li class="sidebar__item">
+          <a href="#projects" class="sidebar__link" data-section="projects">
+            <span class="sidebar__link-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+            </span>
+            <span class="sidebar__link-label">Projects</span>
+            <span class="sidebar__link-accent" aria-hidden="true"></span>
+          </a>
+        </li>
+
+        <li class="sidebar__item">
+          <a href="#testimonials" class="sidebar__link" data-section="testimonials">
+            <span class="sidebar__link-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
+            </span>
+            <span class="sidebar__link-label">Testimonials</span>
+            <span class="sidebar__link-accent" aria-hidden="true"></span>
+          </a>
+        </li>
+
+        <li class="sidebar__item">
+          <!-- Chat placeholder — wire to a chat widget or page -->
+          <a href="#chat" class="sidebar__link" data-section="chat">
+            <span class="sidebar__link-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 20h9" />
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+              </svg>
+            </span>
+            <span class="sidebar__link-label">Chat</span>
+            <span class="sidebar__link-badge" aria-label="Chat available">Live</span>
+            <span class="sidebar__link-accent" aria-hidden="true"></span>
+          </a>
+        </li>
+
+        <li class="sidebar__item">
+          <a href="#contact" class="sidebar__link" data-section="contact">
+            <span class="sidebar__link-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </span>
+            <span class="sidebar__link-label">Contact</span>
+            <span class="sidebar__link-accent" aria-hidden="true"></span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- ── Decorative rule ───────────────────────────────── -->
+    <div class="sidebar__rule" aria-hidden="true"></div>
+
+    <!-- ── Social strip ──────────────────────────────────── -->
+    <div class="sidebar__social" aria-label="Social links">
+      <!-- Replace href with your real profiles -->
+      <a href="https://github.com/sarikasarvesh3" target="_blank" rel="noopener noreferrer" class="sidebar__social-link"
+        aria-label="GitHub profile">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/d-sarika-09070a387?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        target="_blank" rel="noopener noreferrer" class="sidebar__social-link" aria-label="LinkedIn profile">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg>
+      </a>
+      <a href="mailto:sarikasarvesh3@gmail.com" class="sidebar__social-link" aria-label="Send email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <polyline points="22,6 12,13 2,6" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- ── Edition stamp (editorial flavour) ─────────────── -->
+    <p class="sidebar__edition" aria-hidden="true">Vol. I &bull; 2026</p>
+
+  </aside>
+  <!-- /SIDEBAR -->
+
+
+  <!-- ============================================================
+         MAIN — Primary page content
+    ============================================================ -->
+  <main id="main-content" role="main">
+
+
+    <!-- ----------------------------------------------------------
+           SECTION: HERO
+           Purpose : Full-screen introduction — name, title, CTA
+           Content : Headline, sub-headline, call-to-action buttons,
+                     optional animated background or avatar
+      ---------------------------------------------------------- -->
+    <section id="hero" class="section section--hero" aria-label="Hero introduction">
+
+      <!-- Decorative corner brackets (editorial print detail) -->
+      <div class="hero__bracket hero__bracket--tl" aria-hidden="true"></div>
+      <div class="hero__bracket hero__bracket--br" aria-hidden="true"></div>
+
+      <!-- Decorative vertical column rule (magazine divider, visible on desktop) -->
+      <div class="hero__rule" aria-hidden="true"></div>
+
+      <!-- Portrait photo — bleeds on the right panel (desktop) -->
+      <figure class="hero__avatar" aria-hidden="true">
+        <img src="WhatsApp Image 2026-10-07 at 20.10.45.jpeg" alt="Portrait of Sarika — Software Engineer"
+          loading="eager" />
+      </figure>
+
+      <!-- ── Main content panel ───────────────────────────────── -->
+      <div class="hero__content">
+
+        <!-- Eyebrow / edition label (editorial magazine style) -->
+        <span class="hero__eyebrow">Software Engineer &mdash; Portfolio</span>
+
+        <!-- Greeting -->
+        <p class="hero__greeting">Hi, I&rsquo;m</p>
+
+        <!-- Primary headline -->
+        <h1 class="hero__name">D Sarika</h1>
+
+        <!-- Sub-title / role -->
+        <h2 class="hero__title">Full‑Stack Developer</h2>
+
+        <!-- Tagline / lede paragraph -->
+        <p class="hero__tagline">
+          I craft fast, accessible, and beautifully engineered web
+          experiences — from pixel-perfect interfaces to resilient back-end
+          systems.
+        </p>
+
+        <!-- Call-to-action buttons -->
+        <div class="hero__cta" role="group" aria-label="Call to action">
+          <a href="#projects" id="btn-view-work" class="btn btn--primary">View My Work</a>
+          <a href="#contact" id="btn-contact" class="btn btn--outline">Get In Touch</a>
+        </div>
+
+        <!-- Social / quick links -->
+        <ul class="hero__socials" role="list" aria-label="Social links">
+          <li>
+            <a href="https://github.com/sarikasarvesh3" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/d-sarika-09070a387?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="mailto:sarikasarvesh3@gmail.com" aria-label="Email D Sarika">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email
+            </a>
+          </li>
+          <li>
+            <a href="Resume (2).pdf" download aria-label="Download Resume">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Resume
+            </a>
+          </li>
+        </ul>
+
+        <!-- Stats strip — editorial data points -->
+        <div class="hero__meta" aria-label="Career highlights">
+          <div class="hero__stat">
+            <span class="hero__stat-number">3+</span>
+            <span class="hero__stat-label">Years Experience</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-number">20+</span>
+            <span class="hero__stat-label">Projects Shipped</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-number">10+</span>
+            <span class="hero__stat-label">Technologies</span>
+          </div>
+        </div>
+
+      </div>
+      <!-- /hero__content -->
+
+      <!-- Scroll-down indicator -->
+      <a href="#about" class="hero__scroll-hint" aria-label="Scroll to About section">
+        <span class="scroll-arrow"></span>
+        <span>Scroll</span>
+      </a>
+
+    </section>
+    <!-- /HERO -->
+
+
+    <!-- ----------------------------------------------------------
+           SECTION: ABOUT
+           D Sarika — Software Engineer | Bio, Highlights & Interests
+      ---------------------------------------------------------- -->
+    <section id="about" class="section section--about" aria-labelledby="about-heading">
+
+      <!-- Section eyebrow label -->
+      <p class="about__eyebrow">Get to know me</p>
+      <h2 id="about-heading" class="section__title">About Me</h2>
+
+      <div class="about__grid">
+
+        <!-- ── Left: Profile photo column ──────────────────────── -->
+        <div class="about__media-col">
+
+          <!-- Main profile photo -->
+          <figure class="about__photo-frame">
+            <img src="WhatsApp Image 2026-10-07 at 20.10.45.jpeg" alt="Portrait of D Sarika, Software Engineer"
+              class="about__photo-img" loading="lazy" width="420" height="520" />
+            <!-- Decorative floating name badge (editorial detail) -->
+            <figcaption class="about__photo-badge" aria-hidden="true">
+              <span class="about__photo-badge-name">D Sarika</span>
+              <span class="about__photo-badge-role">Software Engineer</span>
+            </figcaption>
+          </figure>
+
+          <!-- Quick-stat pills stacked below photo -->
+          <div class="about__stat-pills" aria-label="Career statistics">
+            <div class="about__stat-pill">
+              <span class="about__stat-pill-num">3+</span>
+              <span class="about__stat-pill-lbl">Years of<br>Experience</span>
+            </div>
+            <div class="about__stat-pill">
+              <span class="about__stat-pill-num">20+</span>
+              <span class="about__stat-pill-lbl">Projects<br>Completed</span>
+            </div>
+            <div class="about__stat-pill">
+              <span class="about__stat-pill-num">10+</span>
+              <span class="about__stat-pill-lbl">Technologies<br>Mastered</span>
+            </div>
+          </div>
+
+        </div>
+        <!-- /media col -->
+
+        <!-- ── Right: Bio column ───────────────────────────────── -->
+        <div class="about__bio-col">
+
+          <!-- Name & title block -->
+          <header class="about__bio-header">
+            <h3 class="about__bio-name">D Sarika</h3>
+            <p class="about__bio-title">Full-Stack Developer &amp; Problem Solver</p>
+          </header>
+
+          <!-- Opening lede -->
+          <p class="about__lede">
+            I'm a passionate and detail-oriented software engineer who thrives
+            on turning complex challenges into clean, elegant solutions. With a
+            strong foundation in both front-end craft and back-end architecture,
+            I build digital experiences that are fast, accessible, and genuinely
+            delightful to use.
+          </p>
+
+          <!-- Secondary paragraph -->
+          <p class="about__body">
+            Currently focused on full-stack web development, I enjoy the entire
+            lifecycle of a product — from whiteboard sketches and wireframes all
+            the way through to deployment and performance optimisation. I believe
+            great software is equal parts engineering rigour and creative
+            sensibility.
+          </p>
+
+          <!-- Highlights -->
+          <div class="about__highlights">
+            <h4 class="about__highlights-title">Career Highlights</h4>
+            <ul class="about__highlights-list" role="list">
+              <li>
+                <span class="about__highlight-icon" aria-hidden="true">🚀</span>
+                Delivered 20+ full-stack applications from concept to production,
+                serving thousands of users.
+              </li>
+              <li>
+                <span class="about__highlight-icon" aria-hidden="true">⚡</span>
+                Improved application performance by up to 60% through
+                code-splitting, caching, and query optimisation.
+              </li>
+              <li>
+                <span class="about__highlight-icon" aria-hidden="true">🤝</span>
+                Collaborated in agile cross-functional teams, bridging the gap
+                between design, product, and engineering.
+              </li>
+              <li>
+                <span class="about__highlight-icon" aria-hidden="true">🎓</span>
+                Bachelor of Technology in Computer Science — strong academic
+                foundation in algorithms and system design.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Interests / personal flavour -->
+          <div class="about__interests">
+            <h4 class="about__interests-title">Beyond the Code</h4>
+            <ul class="about__interests-tags" role="list" aria-label="Personal interests">
+              <li class="about__interest-tag">📚 Tech Reading</li>
+              <li class="about__interest-tag">🎨 UI / UX Design</li>
+              <li class="about__interest-tag">🧩 Problem Solving</li>
+              <li class="about__interest-tag">🌐 Open Source</li>
+              <li class="about__interest-tag">✍️ Technical Writing</li>
+              <li class="about__interest-tag">🎵 Music</li>
+            </ul>
+          </div>
+
+          <!-- Quick-fact strip -->
+          <ul class="about__facts" role="list">
+            <li>
+              <span class="about__fact-icon" aria-hidden="true">📍</span>
+              <span><strong>Location:</strong> India</span>
+            </li>
+            <li>
+              <span class="about__fact-icon" aria-hidden="true">🎓</span>
+              <span><strong>Education:</strong> B.Tech — Computer Science</span>
+            </li>
+            <li>
+              <span class="about__fact-icon" aria-hidden="true">💼</span>
+              <span><strong>Open to:</strong> Full-time &amp; Freelance opportunities</span>
+            </li>
+            <li>
+              <span class="about__fact-icon" aria-hidden="true">🌟</span>
+              <span><strong>Focus:</strong> Full-Stack Web Development</span>
+            </li>
+          </ul>
+
+          <!-- CTA row -->
+          <div class="about__cta">
+            <a href="Resume (2).pdf" download class="btn btn--primary" id="btn-resume">
+              Download Résumé ↓
+            </a>
+            <a href="#contact" class="btn btn--outline-dark" id="btn-about-contact">
+              Let's Connect →
+            </a>
+          </div>
+
+        </div>
+        <!-- /bio col -->
+
+      </div>
+
+    </section>
+    <!-- /ABOUT -->
+
+
+
+    <!-- ----------------------------------------------------------
+           SECTION: SKILLS
+           Purpose : Highlight technical skills and tooling expertise
+      ---------------------------------------------------------- -->
+    <section id="skills" class="section section--skills" aria-labelledby="skills-heading">
+
+      <p class="about__eyebrow">Core Competencies</p>
+      <h2 id="skills-heading" class="section__title">Skills &amp; Technologies</h2>
+      <p class="section__subtitle">A snapshot of the languages, frameworks, and AI paradigms I specialize in.</p>
+
+      <div class="skills__grid">
+
+        <!-- Skill category: AI & Machine Learning -->
+        <article class="skill-card" aria-label="AI and Machine Learning">
+          <div class="skill-card__header">
+            <span class="skill-card__icon" aria-hidden="true">🧠</span>
+            <h3 class="skill-card__title">AI &amp; Machine Learning</h3>
+          </div>
+          <!-- Styled list representing different paradigms -->
+          <ul class="skill-card__list" role="list">
+            <li class="skill-tag skill-tag--animated">Machine Learning</li>
+            <li class="skill-tag skill-tag--animated">Deep Learning</li>
+            <li class="skill-tag skill-tag--animated">NLP</li>
+            <li class="skill-tag skill-tag--animated">Computer Vision</li>
+            <li class="skill-tag skill-tag--animated">Generative AI</li>
+          </ul>
+        </article>
+
+        <!-- Skill category: Languages -->
+        <article class="skill-card" aria-label="Programming Languages">
+          <div class="skill-card__header">
+            <span class="skill-card__icon" aria-hidden="true">⌨️</span>
+            <h3 class="skill-card__title">Languages</h3>
+          </div>
+          <!-- Progress bars representing proficiency -->
+          <ul class="skill-bars" role="list">
+            <li class="skill-bar">
+              <div class="skill-bar__info">
+                <span class="skill-bar__name">Python</span>
+                <span class="skill-bar__percent">95%</span>
+              </div>
+              <div class="skill-bar__track" aria-hidden="true">
+                <div class="skill-bar__fill" style="width: 95%;"></div>
+              </div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar__info">
+                <span class="skill-bar__name">C++</span>
+                <span class="skill-bar__percent">85%</span>
+              </div>
+              <div class="skill-bar__track" aria-hidden="true">
+                <div class="skill-bar__fill" style="width: 85%;"></div>
+              </div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar__info">
+                <span class="skill-bar__name">SQL</span>
+                <span class="skill-bar__percent">90%</span>
+              </div>
+              <div class="skill-bar__track" aria-hidden="true">
+                <div class="skill-bar__fill" style="width: 90%;"></div>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Skill category: Frameworks & Libraries -->
+        <article class="skill-card" aria-label="Frameworks and Libraries">
+          <div class="skill-card__header">
+            <span class="skill-card__icon" aria-hidden="true">⚙️</span>
+            <h3 class="skill-card__title">Frameworks &amp; Data</h3>
+          </div>
+          <!-- Styled list representing libraries and frameworks -->
+          <ul class="skill-card__list" role="list">
+            <li class="skill-tag skill-tag--animated">PyTorch</li>
+            <li class="skill-tag skill-tag--animated">TensorFlow</li>
+            <li class="skill-tag skill-tag--animated">Scikit-learn</li>
+            <li class="skill-tag skill-tag--animated">Pandas</li>
+            <li class="skill-tag skill-tag--animated">NumPy</li>
+            <li class="skill-tag skill-tag--animated">FastAPI</li>
+          </ul>
+        </article>
+
+        <!-- Skill category: Tools & Platforms -->
+        <article class="skill-card" aria-label="Tools and Platforms">
+          <div class="skill-card__header">
+            <span class="skill-card__icon" aria-hidden="true">🛠️</span>
+            <h3 class="skill-card__title">Tools &amp; Version Control</h3>
+          </div>
+          <!-- Progress bars representing proficiency -->
+          <ul class="skill-bars" role="list">
+            <li class="skill-bar">
+              <div class="skill-bar__info">
+                <span class="skill-bar__name">Git</span>
+                <span class="skill-bar__percent">90%</span>
+              </div>
+              <div class="skill-bar__track" aria-hidden="true">
+                <div class="skill-bar__fill" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar__info">
+                <span class="skill-bar__name">GitHub</span>
+                <span class="skill-bar__percent">90%</span>
+              </div>
+              <div class="skill-bar__track" aria-hidden="true">
+                <div class="skill-bar__fill" style="width: 90%;"></div>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+
+    </section>
+    <!-- /SKILLS -->
+
+
+    <!-- ----------------------------------------------------------
+           SECTION: TIMELINE (Education)
+           Purpose : Chronological academic background
+      ---------------------------------------------------------- -->
+    <section id="timeline" class="section section--timeline" aria-labelledby="timeline-heading">
+
+      <p class="about__eyebrow">Academic Journey</p>
+      <h2 id="timeline-heading" class="section__title">Education</h2>
+
+      <ol class="timeline" aria-label="Education timeline">
+
+        <!-- Timeline item: B.E. -->
+        <li class="timeline__item timeline__item--education">
+          <div class="timeline__marker" aria-hidden="true"></div>
+          <article class="timeline__card">
+            <header class="timeline__card-header">
+              <h3 class="timeline__role">Bachelor of Engineering (B.E.)</h3>
+              <span class="timeline__company">Adichunchanagiri Institute of Technology</span>
+              <time class="timeline__date" datetime="2029">Expected Graduation: 2029</time>
+            </header>
+            <p class="timeline__description">
+              Currently pursuing my B.E. degree, building a strong foundation in computer science and engineering
+              principles.
+            </p>
+          </article>
+        </li>
+
+        <!-- Timeline item: 11th and 12th -->
+        <li class="timeline__item timeline__item--education">
+          <div class="timeline__marker" aria-hidden="true"></div>
+          <article class="timeline__card">
+            <header class="timeline__card-header">
+              <h3 class="timeline__role">Pre-University (11th & 12th Grade)</h3>
+              <span class="timeline__company">Narayana PU College</span>
+            </header>
+            <p class="timeline__description">
+              Completed my higher secondary education, focusing on core sciences and mathematics.
+            </p>
+          </article>
+        </li>
+
+        <!-- Timeline item: Higher education / Schooling -->
+        <li class="timeline__item timeline__item--education">
+          <div class="timeline__marker" aria-hidden="true"></div>
+          <article class="timeline__card">
+            <header class="timeline__card-header">
+              <h3 class="timeline__role">Higher Education</h3>
+              <span class="timeline__company">Jawahar Navodaya Vidyalaya</span>
+            </header>
+            <p class="timeline__description">
+              Completed foundational schooling, developing early problem-solving skills and academic excellence.
+            </p>
+          </article>
+        </li>
+
+      </ol>
+
+    </section>
+    <!-- /TIMELINE -->
+
+
+    <!-- ----------------------------------------------------------
+           SECTION: PROJECTS
+           Purpose : Showcase notable personal / professional projects
+           Content : Project cards with title, description, tech stack,
+                     live demo link, and GitHub link
+      ---------------------------------------------------------- -->
+    <section id="projects" class="section section--projects" aria-labelledby="projects-heading">
+
+      <h2 id="projects-heading" class="section__title">Projects</h2>
+      <p class="section__subtitle">A selection of things I've built.</p>
+
+      <!-- Filter buttons (optional, controlled via main.js) -->
+      <div class="projects__filters" role="group" aria-label="Filter projects by category">
+        <button class="filter-btn filter-btn--active" data-filter="all" id="filter-all">All</button>
+        <button class="filter-btn" data-filter="web" id="filter-web">Web</button>
+        <button class="filter-btn" data-filter="ml" id="filter-ml">ML / AI</button>
+        <button class="filter-btn" data-filter="tools" id="filter-tools">Tools</button>
+      </div>
+
+      <div class="projects__grid">
+
+        <!-- Project card 1 -->
+        <article class="project-card" data-category="web" aria-label="Project: Project One">
+          <!-- Project thumbnail / screenshot -->
+          <figure class="project-card__thumbnail">
+            <!-- <img src="assets/projects/project1.webp" alt="Screenshot of Project One" loading="lazy" /> -->
+          </figure>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Project One</h3>
+            <p class="project-card__description">
+              <!-- Placeholder: 1-2 sentences describing what this project does
+                     and what problem it solves. -->
+              A brief description of what this project does, who it's for,
+              and the problem it solves.
+            </p>
+            <ul class="project-card__tags" role="list" aria-label="Technologies used">
+              <li class="skill-tag">React</li>
+              <li class="skill-tag">Node.js</li>
+              <li class="skill-tag">MongoDB</li>
+            </ul>
+            <footer class="project-card__links">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary"
+                id="proj1-demo">Live Demo &nearr;</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--outline"
+                id="proj1-code">Source Code</a>
+            </footer>
+          </div>
+        </article>
+
+        <!-- Project card 2 -->
+        <article class="project-card" data-category="ml" aria-label="Project: Project Two">
+          <figure class="project-card__thumbnail">
+            <!-- <img src="assets/projects/project2.webp" alt="Screenshot of Project Two" loading="lazy" /> -->
+          </figure>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Project Two</h3>
+            <p class="project-card__description">
+              <!-- Placeholder: Describe the ML model, dataset, accuracy, etc. -->
+              An ML-powered application that predicts / classifies / generates
+              [thing] using [model/algorithm].
+            </p>
+            <ul class="project-card__tags" role="list" aria-label="Technologies used">
+              <li class="skill-tag">Python</li>
+              <li class="skill-tag">TensorFlow</li>
+              <li class="skill-tag">Flask</li>
+            </ul>
+            <footer class="project-card__links">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary"
+                id="proj2-demo">Live Demo &nearr;</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--outline"
+                id="proj2-code">Source Code</a>
+            </footer>
+          </div>
+        </article>
+
+        <!-- Project card 3 -->
+        <article class="project-card" data-category="tools" aria-label="Project: Project Three">
+          <figure class="project-card__thumbnail">
+            <!-- <img src="assets/projects/project3.webp" alt="Screenshot of Project Three" loading="lazy" /> -->
+          </figure>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Project Three</h3>
+            <p class="project-card__description">
+              <!-- Placeholder: Describe the CLI / developer tool. -->
+              A developer tool / CLI that automates [task], saving engineers
+              [X hours] per week.
+            </p>
+            <ul class="project-card__tags" role="list" aria-label="Technologies used">
+              <li class="skill-tag">Go</li>
+              <li class="skill-tag">CLI</li>
+            </ul>
+            <footer class="project-card__links">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary"
+                id="proj3-demo">Live Demo &nearr;</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--outline"
+                id="proj3-code">Source Code</a>
+            </footer>
+          </div>
+        </article>
+
+        <!-- Add more project cards as needed -->
+
+      </div>
+
+    </section>
+    <!-- /PROJECTS -->
+
+
+    <!-- ----------------------------------------------------------
+           SECTION: TESTIMONIALS (optional)
+           Purpose : Social proof — quotes from colleagues / managers
+           Content : Quote text, author name, role, company, optional photo
+      ---------------------------------------------------------- -->
+    <section id="testimonials" class="section section--testimonials" aria-labelledby="testimonials-heading">
+
+      <h2 id="testimonials-heading" class="section__title">What People Say</h2>
+
+      <div class="testimonials__grid" role="list">
+
+        <!-- Testimonial item 1 -->
+        <figure class="testimonial-card" role="listitem">
+          <blockquote class="testimonial-card__quote">
+            "D Sarika is an exceptional engineer who consistently delivers
+            high-quality work. Her attention to detail, problem-solving mindset,
+            and collaborative spirit make her a true asset to any team."
+          </blockquote>
+          <figcaption class="testimonial-card__author">
+            <!-- <img src="assets/testimonials/person1.webp" alt="Photo of Colleague Name" /> -->
+            <strong>Colleague Name</strong>
+            <span>Engineering Manager, Company XYZ</span>
+          </figcaption>
+        </figure>
+
+        <!-- Add more testimonial cards as needed -->
+
+      </div>
+
+    </section>
+    <!-- /TESTIMONIALS -->
+
+
+    <!-- ----------------------------------------------------------
+           SECTION: CHAT
+           Purpose : Let visitors interact with an AI version of the owner
+      ---------------------------------------------------------- -->
+    <section id="chat" class="section section--chat" aria-labelledby="chat-heading">
+
+      <p class="about__eyebrow">Interactive Demo</p>
+      <h2 id="chat-heading" class="section__title">Chat with AI Sarika</h2>
+      <p class="section__subtitle">
+        Have questions about my background or experience? Ask my AI assistant below!
+      </p>
+
+      <div class="chat-container">
+        <!-- Message display area -->
+        <div class="chat-window" id="chat-window" role="log" aria-live="polite">
+          <div class="chat-message chat-message--bot">
+            <div class="chat-message__avatar">🤖</div>
+            <div class="chat-message__content">
+              Hi there! I'm an AI assistant trained on Sarika's portfolio and resume. How can I help you today?
+            </div>
+          </div>
+        </div>
+
+        <!-- Input area -->
+        <form class="chat-input-area" id="chat-form">
+          <input type="text" id="chat-input" class="chat-input" placeholder="Type your message..." autocomplete="off"
+            required />
+          <button type="submit" class="btn btn--primary chat-send-btn" aria-label="Send message">
+            Send <span aria-hidden="true">➤</span>
+          </button>
+        </form>
+      </div>
+
+    </section>
+    <!-- /CHAT -->
+
+
+    <!-- ----------------------------------------------------------
+           SECTION: CONTACT
+           Purpose : Let visitors reach out
+           Content : Short CTA copy, contact form (name, email, message),
+                     email / social links as fallback
+      ---------------------------------------------------------- -->
+    <section id="contact" class="section section--contact" aria-labelledby="contact-heading">
+
+      <h2 id="contact-heading" class="section__title">Get In Touch</h2>
+      <p class="section__subtitle">
+        Have a project in mind or just want to say hello? I'd love to hear from you.
+      </p>
+
+      <!-- Contact form -->
+      <form id="contact-form" class="contact-form" action="#" method="POST" novalidate aria-label="Contact form">
+
+        <div class="form-group">
+          <label for="contact-name">Full Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="contact-name" name="name" placeholder="Jane Doe" required autocomplete="name"
+            aria-required="true" />
+        </div>
+
+        <div class="form-group">
+          <label for="contact-email">Email Address <span aria-hidden="true">*</span></label>
+          <input type="email" id="contact-email" name="email" placeholder="jane@example.com" required
+            autocomplete="email" aria-required="true" />
+        </div>
+
+        <div class="form-group">
+          <label for="contact-message">Message <span aria-hidden="true">*</span></label>
+          <textarea id="contact-message" name="message" rows="6" placeholder="Tell me about your project..." required
+            aria-required="true"></textarea>
+        </div>
+
+        <button type="submit" id="btn-send" class="btn btn--primary btn--full-width">
+          Send Message &rarr;
+        </button>
+
+        <!-- Form feedback messages (shown/hidden via JS) -->
+        <p id="form-success" class="form-feedback form-feedback--success" role="alert" hidden>
+          Message sent successfully! I'll get back to you soon.
+        </p>
+        <p id="form-error" class="form-feedback form-feedback--error" role="alert" hidden>
+          Something went wrong. Please try again or email me directly.
+        </p>
+
+      </form>
+
+      <!-- Alternative contact links -->
+      <address class="contact__alternatives">
+        <p>Or reach me directly at:</p>
+        <ul role="list">
+          <li>
+            <a href="mailto:sarikasarvesh3@gmail.com" id="link-email">
+              sarikasarvesh3@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/d-sarika-09070a387?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              target="_blank" rel="noopener noreferrer" id="link-linkedin">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/sarikasarvesh3" target="_blank" rel="noopener noreferrer" id="link-github">
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </address>
+
+    </section>
+    <!-- /CONTACT -->
+
+
+  </main>
+  <!-- /MAIN -->
+
+
+  <!-- ============================================================
+         FOOTER — Bottom of the page
+         Contains: copyright, quick links, back-to-top button
+    ============================================================ -->
+  <footer id="footer" class="site-footer" role="contentinfo">
+
+    <div class="footer__inner">
+
+      <!-- Footer brand / tagline -->
+      <p class="footer__brand">
+        <strong>D Sarika</strong> &mdash; Built with love using vanilla HTML, CSS &amp; JS
+      </p>
+
+      <!-- Quick navigation links -->
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <ul role="list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Copyright — year is auto-filled by JS -->
+      <p class="footer__copy">
+        <small>
+          &copy; <span id="footer-year"></span> D Sarika. All rights reserved.
+        </small>
+      </p>
+
+    </div>
+
+    <!-- Back to top button -->
+    <a href="#hero" id="back-to-top" class="back-to-top" aria-label="Back to top">&uarr;</a>
+
+  </footer>
+  <!-- /FOOTER -->
+
+
+  <!-- ============================================================
+         SCRIPTS
+         Loaded at the bottom of <body> for best performance.
+         main.js handles: mobile nav toggle, active nav highlighting,
+         scroll-reveal animations, project filter, form submission,
+         and auto-filling the footer year.
+    ============================================================ -->
+  <!-- Inline bootstrap script: runs before main.js exists -->
+  <script>
+    /* ── Footer year ──────────────────────────────────────── */
+    const yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    /* ── Sidebar toggle (mobile open / close) ─────────────── */
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const backdrop = document.getElementById('sidebar-backdrop');
+
+    function openSidebar() {
+      sidebar.classList.add('sidebar--open');
+      backdrop.classList.add('sidebar-backdrop--visible');
+      sidebarToggle.setAttribute('aria-expanded', 'true');
+      sidebarToggle.setAttribute('aria-label', 'Close navigation menu');
+      document.body.classList.add('sidebar-open');
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('sidebar--open');
+      backdrop.classList.remove('sidebar-backdrop--visible');
+      sidebarToggle.setAttribute('aria-expanded', 'false');
+      sidebarToggle.setAttribute('aria-label', 'Open navigation menu');
+      document.body.classList.remove('sidebar-open');
+    }
+
+    if (sidebarToggle) {
+      sidebarToggle.addEventListener('click', () => {
+        const isOpen = sidebarToggle.getAttribute('aria-expanded') === 'true';
+        isOpen ? closeSidebar() : openSidebar();
+      });
+    }
+
+    /* Backdrop click closes sidebar on mobile */
+    if (backdrop) backdrop.addEventListener('click', closeSidebar);
+
+    /* Close sidebar on nav link click (mobile UX) */
+    /* Close sidebar on nav link click (mobile & tablet UX) */
+    document.querySelectorAll('.sidebar__link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 1024) closeSidebar();
+      });
+    });
+
+    /* Auto-reset sidebar on viewport resize to desktop */
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024 && sidebar.classList.contains('sidebar--open')) {
+        closeSidebar();
+      }
+    });
+
+    /* Trap focus / close on Escape when open (a11y) */
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && sidebar.classList.contains('sidebar--open')) closeSidebar();
+    });
+
+    /* ── Active link tracking via IntersectionObserver ────── */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.sidebar__link[data-section]');
+
+    function setActiveLink(id) {
+      navLinks.forEach(link => {
+        const active = link.dataset.section === id;
+        link.classList.toggle('sidebar__link--active', active);
+        link.setAttribute('aria-current', active ? 'page' : 'false');
+      });
+    }
+
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) setActiveLink(entry.target.id);
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+    sections.forEach(s => sectionObserver.observe(s));
+
+    /* ── Scroll-reveal on all .section elements ────────────── */
+    document.querySelectorAll('.section').forEach(el => el.classList.add('reveal'));
+    const revealObserver = new IntersectionObserver(
+      entries => entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObserver.unobserve(e.target);
+        }
+      }),
+      { threshold: 0.08 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    /* ── Chat Functionality ────────────────────────────────── */
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+    const chatWindow = document.getElementById('chat-window');
+
+    if (chatForm && chatInput && chatWindow) {
+      chatForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const userMessage = chatInput.value.trim();
+        if (!userMessage) return;
+
+        // Display user message
+        appendMessage('user', userMessage);
+        chatInput.value = '';
+
+        // Simulate AI thinking delay
+        setTimeout(() => {
+          // TODO: Integrate OpenAI API or similar here.
+          // Example:
+          // fetch('/api/chat', { method: 'POST', body: JSON.stringify({ message: userMessage }) })
+          //   .then(res => res.json())
+          //   .then(data => appendMessage('bot', data.reply));
+
+          // Simulated generic response for demo purposes
+          appendMessage('bot', "Thanks for your message! This is a simulated response. You can connect an API (like OpenAI) here to make me fully conversational.");
+        }, 800);
+      });
+
+      function appendMessage(sender, text) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chat-message chat-message--${sender}`;
+
+        const avatarDiv = document.createElement('div');
+        avatarDiv.className = 'chat-message__avatar';
+        avatarDiv.textContent = sender === 'bot' ? '🤖' : '👤';
+
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'chat-message__content';
+        contentDiv.textContent = text;
+
+        messageDiv.appendChild(avatarDiv);
+        messageDiv.appendChild(contentDiv);
+
+        chatWindow.appendChild(messageDiv);
+
+        // Auto-scroll to bottom
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+      }
+    }
+
+    /* ── Contact Form Functionality ────────────────────────── */
+    const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Hide previous messages
+        if (formSuccess) formSuccess.hidden = true;
+        if (formError) formError.hidden = true;
+
+        // Collect form data
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData.entries());
+
+        // TODO: Integrate email-sending service (e.g., Resend API, EmailJS) here.
+        // Example:
+        // fetch('https://api.resend.com/emails', {
+        //   method: 'POST',
+        //   headers: {
+        //     'Content-Type': 'application/json',
+        //     'Authorization': 'Bearer YOUR_API_KEY'
+        //   },
+        //   body: JSON.stringify({
+        //     from: 'Acme <onboarding@resend.dev>',
+        //     to: ['delivered@resend.dev'],
+        //     subject: 'New Contact Form Submission',
+        //     html: `<p>Name: ${data.name}</p><p>Email: ${data.email}</p><p>Message: ${data.message}</p>`
+        //   })
+        // })
+        // .then(res => res.json())
+        // .then(response => {
+        //   // Handle success
+        // })
+        // .catch(error => {
+        //   // Handle error
+        // });
+
+        // Simulate successful submission
+        setTimeout(() => {
+          if (formSuccess) {
+            formSuccess.hidden = false;
+          }
+          contactForm.reset();
+        }, 500);
+      });
+    }
+  </script>
+
+  <!-- External JS (wire up form, filters, etc.) -->
+  <!-- <script src="main.js" defer></script> -->
+
+</body>
+
+</html>
